@@ -1,0 +1,20 @@
+{
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./"],
+      "alias": {
+        "test": "./tests",
+        "underscore": "lodash"
+      }
+    }],
+    "@babel/plugin-transform-modules-commonjs"
+  ],
+  "env": {
+    "test": {
+      "plugins": [
+        "@babel/plugin-transform-modules-commonjs",
+        "@babel/plugin-proposal-throw-expressions"
+      ]
+    }
+  }
+}
