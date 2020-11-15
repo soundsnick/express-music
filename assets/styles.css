@@ -3,9 +3,72 @@ body {
     padding: 0;
     background: #282828;
     color: #fff;
+    font-family: sans-serif;
+}
+* {
+    box-sizing: border-box;
+}
+a {
+    text-decoration: none;
+    color: inherit;
 }
 .container {
     max-width: 1000px;
     margin: auto;
     position: relative;
+}
+.container.mini {
+    max-width: 400px;
+}
+.header {
+    background: rgba(0,0,0,.06);
+    border-bottom: 1px solid #212121;
+    box-shadow: 0px 1px 14px #212121;
+    padding: 5px 0;
+}
+.header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.navigation__item {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13px;
+    padding: 0 5px;
+    transition: color 0.2s;
+}
+.navigation__item:hover {
+    color: #fff;
+}
+.logo {
+    font-size: 20px;
+    color: #E91E63;
+    font-family: cursive;
+}
+.form__field {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    font-size: 13px;
+    font-family: inherit;
+    border: 1px solid #565656;
+    margin-bottom: 5px;
+    border-radius: 5px;
+}
+.form__button {
+    background: #e91e63;
+    font-family: inherit;
+    color: #fff;
+    border: 0;
+    border-radius: 5px;
+    padding: 10px 30px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+.form__button:hover {
+    background: #c11851;
+}
+.auth {
+    padding-top: 30px;
 }

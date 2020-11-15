@@ -1,4 +1,4 @@
-const indexAction = () => ({
+const indexAction = (req, res) => ({
     postTitle: "Title",
     postParagraph: "Content"
 })

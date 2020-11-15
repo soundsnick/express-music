@@ -1,0 +1,13 @@
+<div class="container mini">
+    <form class="auth" action="/login" method="post">
+        <h1>Войти</h1>
+        <% if(message) { %>
+            <div class="notice">
+                <%= message %>
+            </div>
+        <% } %>
+        <input type="text" class="form__field" name="username" placeholder="Имя пользователя">
+        <input type="password" class="form__field" name="password" placeholder="Пароль">
+        <input type="submit" class="form__button" value="Войти">
+    </form>
+</div>
