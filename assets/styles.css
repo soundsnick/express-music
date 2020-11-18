@@ -72,3 +72,21 @@ a {
 .auth {
     padding-top: 30px;
 }
+.error-page {
+    text-align: center;
+}
+.form-flex {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: space-between;
+}
+.form-file {
+    padding: 15px 0;
+}
+.form__caption {
+    margin-right: 10px;
+    color: #716c6c;
+    text-shadow: 0 1px 1px #313131;
+    font-size: 13px;
+}

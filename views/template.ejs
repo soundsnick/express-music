@@ -16,6 +16,7 @@
             </h1>
             <nav class="navigation">
                 <% if(session.auth) { %>
+                    <a href="/add" class="navigation__item">Добавить трек</a>
                     <a href="/logout" class="navigation__item">Выйти</a>
                 <% }else { %>
                     <a href="/login" class="navigation__item">Войти</a>

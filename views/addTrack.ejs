@@ -1,0 +1,25 @@
+<div class="container">
+    <h1>Добавить трек</h1>
+    <form action="/add" method="post" enctype="multipart/form-data">
+        <% if(message) { %>
+            <div class="notice">
+                <%= message %>
+            </div>
+        <% } %>
+        <input type="text" class="form__field" name="title" placeholder="Название трека">
+        <input type="text" class="form__field" name="author" placeholder="Автор трека">
+        <input type="text" class="form__field" name="artist" placeholder="Исполнитель трека">
+        <div class="form-flex">
+            <div class="form-file">
+                <span class="form__caption">Обложка</span>
+                <input type="file" name="cover">
+            </div>
+            <div class="form-file">
+                <span class="form__caption">Трек</span>
+                <input type="file" name="track">
+            </div>
+        </div>
+
+        <input type="submit" class="form__button" value="Добавить">
+    </form>
+</div>

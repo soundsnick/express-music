@@ -1,6 +1,9 @@
-const indexAction = (req, res) => ({
-    postTitle: "Title",
-    postParagraph: "Content"
-})
+import { getLastTracks } from "../models/track";
 
-export { indexAction }
+const indexAction = (req, res) => {
+    return {
+        lastTracks: getLastTracks()
+    }
+};
+
+export { indexAction };
