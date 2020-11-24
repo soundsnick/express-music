@@ -1,6 +1,6 @@
 <div class="container">
     <% if(typeof message != "undefined") { %><div class="notice"><%= message %></div><% } %>
-    <h1 class="title">Свежие треки</h1>
+    <h1 class="title">Мой плейлист</h1>
     <div class="grid-last">
         <% lastTracks.forEach((track) => { %>
             <div class="track--wrapper">
@@ -11,7 +11,7 @@
                         <span class="track__artist">Исполнитель: <%= track.artist %></span>
                         <span class="track__author">Автор: <%= track.author %></span>
                     </div>
-                    <a href="/add/favourite?id=<%= track.id %>" class="add-favourite">Добавить в плейлист</a>
+                    <a href="/remove/favourite?id=<%= track.id %>" class="add-favourite">Удалить из плейлиста</a>
                 </div>
                 <div class="track-player">
                     <audio controls>
