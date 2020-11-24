@@ -35,14 +35,9 @@ const schema = new Schema(
 
 
 const Track = database.model('Track', schema);
-const getLastTracks = () => {
-    let trackList = [];
-    Track
-        .find({})
-        .limit(5)
-        .sort({id: -1})
-        .then(tracks => { trackList = tracks });
-    return trackList;
-}
+const getLastTracks = async () => await Track
+    .find({})
+    .limit(5)
+    .sort({id: -1});
 
 export { getLastTracks, Track };

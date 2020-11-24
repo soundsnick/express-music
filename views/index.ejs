@@ -1,13 +1,21 @@
 <div class="container">
-    <h1>Свежие треки</h1>
+    <h1 class="title">Свежие треки</h1>
     <div class="grid-last">
         <% lastTracks.forEach((track) => { %>
-            <div class="track">
-                <div class="track__cover" style="background-image: url('/public/uploads/covers/<%= track.cover %>')"></div>
-                <div class="track__meta">
-                    <span class="track__title"><%= track.title %></span>
-                    <span class="track__artist"><%= track.artist %></span>
-                    <span class="track__author"><%= track.author %></span>
+            <div class="track--wrapper">
+                <div class="track">
+                    <div class="track__cover" style="background-image: url('/public/uploads/covers/<%= track.cover %>')"></div>
+                    <div class="track__meta">
+                        <span class="track__title"><%= track.title %></span>
+                        <span class="track__artist">Исполнитель: <%= track.artist %></span>
+                        <span class="track__author">Автор: <%= track.author %></span>
+                    </div>
+                </div>
+                <div class="track-player">
+                    <audio controls>
+                        <source src="/public/uploads/tracks/<%= track.track %>" type="audio/mpeg">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
             </div>
         <% }) %>
